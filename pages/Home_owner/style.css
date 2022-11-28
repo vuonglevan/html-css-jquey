@@ -1,0 +1,312 @@
+.container {
+    word-spacing: 0.5;
+}
+.page{
+    margin: 0 15px;
+}
+
+.font-outfit-bold{
+    font-family: 'Outfit';
+    font-weight: 700;
+}
+
+.header {
+    margin-bottom: 45px;
+}
+
+.header-top {
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 10px;
+    max-width: 390px;
+}
+
+.header-icon {
+    display: flex;
+    gap: 15px;
+}
+
+.header-botom {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: auto 35px;
+    grid-gap: 40px;
+}
+
+.header-input {
+    width: 100%;
+    position: relative;
+}
+
+.header-input input {
+    padding: 10px 0 10px 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #F2F2F2;
+    width: 100%;
+}
+
+.header-input i {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #BFBFBF;
+    font-size: 10px;
+}
+
+.header-qrcode {
+    height: 35px;
+
+}
+
+.header-qrcode i {
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.icon {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    color: #000000;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.icon .item {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
+
+.item .fa-circle-small {
+    position: absolute;
+    font-size: 20px;
+}
+
+
+.header-bottom {
+    display: flex;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.content {
+    margin: 40px 0 60px 0;
+}
+
+.row-item .fa-location-dot {
+    position: absolute;
+    left: 0;
+}
+
+.slider-content {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    gap: 20px;
+    overflow: auto;
+    width: 100%;
+}
+
+.slider-content::-webkit-scrollbar {
+    width: 0px; 
+}
+
+.slider-content-item {
+    border: 1px solid #E4E4E4;
+    min-width: 200px;
+    margin-top: 20px;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.box-success{
+    border: 1px solid #41BA7266;
+}
+
+.row:nth-child(1){
+    color: #1D1D1D;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.feature .row:nth-child(1) i{
+    color: #888888;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.box-success .row:nth-child(1) {
+    color: #41BA72;
+}
+
+.box-error{
+    border: 1px solid #F04F4F66;
+}
+
+.box-error .row:nth-child(1) {
+    color: #F04F4F;
+}
+
+.box-violet{
+    border: 1px solid #7566ED66;
+}
+
+.box-violet .row:nth-child(1){
+    color: #7566ED ;
+    font-weight: 700;
+}
+
+.box-date-ping{
+    color: #ff809d;
+}
+
+.box-date-blue{
+    color: #74c0ff;
+}
+
+.box-none .slider-content-item{
+    border: none !important;
+}
+
+.box-none{
+    text-align: center;
+}
+
+.box-none .none{
+    display: block;
+    color: #bfbfbf;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+.box-none .row{
+    display: none;
+} 
+
+.none{
+    display: none;
+}
+
+.row:nth-child(2) {
+    margin-bottom: 10px;
+}
+
+.row-item {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+
+.lable {
+    display: inline;
+    background-color: #E4E0FF;
+    font-size: 14px;
+    width: auto;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.span-lable {
+    font-size: 10px;
+}
+
+.slider-container{
+    display: none;
+}
+
+.box-date{
+    min-height: 13px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Outfit';
+}
+
+.warning{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.label-warning{
+    color: #888888;
+    font-size: 10px;
+}
+
+.showmore{
+    position: relative;
+}
+
+.showmore button{
+    position: absolute;
+    border: none;
+    background-color: #fff;
+    font-weight: 700;
+    color: #359EC7;
+    right: 0;
+}
+
+.row:nth-child(2) i, 
+.row:nth-child(3) i{
+    color: #888888;
+}
+
+
+.active{
+    display: block !important;
+}
+
+.btn{
+    color: #BFBFBF;
+    background: #fff;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.btn.btn_active {
+    color: #359EC7;
+}
+
+input::placeholder {
+    color: #BFBFBF;
+    font-size: 10px;
+}
+
+.fa-circle-user {
+    font-size: 25px;
+    color: #7566ED;
+}
+
+.fa-qrcode {
+    margin-left: 15px;
+}
+
+.fa-circle-exclamation {
+    color: red;
+    margin-left: 5px;
+}
+.btn_primary i{
+    margin-right: 10px;
+}

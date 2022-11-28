@@ -1,0 +1,282 @@
+.content {
+    margin: 0 15px;
+}
+
+.hide {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.text-head {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.seamote,
+.vherme {
+    border-radius: 10px;
+    font-size: 10px;
+    padding: 3px 10px;
+    width: 65px;
+    cursor: pointer;
+}
+
+.seamote {
+    background-color: #FCFCB8;
+    font-family: 'Outfit';
+    font-weight: 500;
+}
+
+.vherme {
+    background-color: #E5F2FF;
+    font-family: 'Outfit';
+    font-weight: 500;
+
+}
+
+.row {
+    margin-bottom: 30px;
+}
+
+.col {
+    position: relative;
+}
+
+.row i {
+    font-size: 14px;
+    top: 20px;
+    position: absolute;
+}
+
+.row:not(.row:nth-child(1)),
+.row:nth-child(1) .row-son:nth-child(2) {
+    display: grid;
+    grid-template-columns: 100px auto;
+    gap: 10px;
+}
+
+.row-son {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 10px;
+    color: #888888;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.text {
+    padding-left: 24px;
+    white-space: nowrap;
+}
+
+.text p {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.infomation {
+    margin-bottom: 40px;
+}
+
+.table-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.message {
+    margin-bottom: 30px;
+}
+
+.table-head button {
+    width: 100%;
+    border: none;
+    background-color: white;
+    padding: 15px;
+    color: #888888;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.btn_active {
+    color: #359EC7 !important;
+    border-bottom: 4px solid #359EC7 !important;
+    font-weight: 700 !important;
+}
+
+.tab-content-item {
+    display: none;
+}
+
+.tab-content-item.active{
+    display: block;
+}
+
+.message i {
+    font-size: 14px;
+}
+
+.message span {
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+table {
+    text-align: center;
+}
+
+table th {
+    min-width: 80px;
+    white-space: nowrap;
+    font-size: 10px;
+    background-color: #F4F4F4;
+    padding: 10px 20px;
+    border-right: 1px solid white;
+}
+
+table td {
+    padding: 15px;
+}
+
+table button {
+    width: 150px;
+    border: none;
+    white-space: nowrap;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+table .fa-circle-check {
+    color: #888888;
+    font-size: 14px;
+}
+
+table td {
+    border: 1px solid #F4F4F4;
+}
+
+.font-outfit-bold {
+    font-family: 'Outfit';
+    font-weight: 700;
+}
+
+.x {
+    background-color: #FFE6E6;
+    font-size: 14px;
+    color: #F04F4F;
+}
+
+.btn-primary {
+    background: #359EC7;
+    color: white;
+}
+
+.btn-info {
+    background-color: white;
+    color: #359EC7;
+    border: 2px solid #359EC7;
+}
+
+.violet {
+    background-color: #e4e0ff;
+    color: #7566ed;
+}
+
+.error,
+.grey,
+.success,
+.success-i,
+.orange,
+.ping ,
+.violet{
+    width: 80px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.ping{
+    background-color: #ffe6e6;
+    color:#f15d5d;
+}
+
+.btn-active{
+    font-weight: 700;
+}
+
+.orange{
+    background-color: #ffefd1;
+    color: #f5af14;
+}
+
+.light {
+    background-color: white;
+    color: #888888;
+}
+
+.grey {
+    color: #888888;
+    background-color: #E4E4E4;
+}
+
+.success,.success-i {
+    background-color: #dcf1e4;
+    color: #59c283;
+    position: relative;
+}
+
+.fa-circle-exclamation, .fa-triangle-exclamation{
+    display: none;
+}
+
+.success-i .fa-triangle-exclamation{
+    display: block !important;
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.error {
+    background-color: #ffe6e6;
+    color: #f15555;
+    position: relative;
+}
+
+.btn-error .fa-circle-exclamation {
+    display: block !important;
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.table-report-problem th{
+    min-width: 50px;
+}
+
+.table-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table-container::-webkit-scrollbar {
+    width: 0px; 
+}
+
+.date{
+    margin-right: 10px;
+}

@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assets-detail</title>
+    <link rel="stylesheet" href="../../assets/styles/reset.css">
+    <link rel="stylesheet" href="../../assets/icons/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="page">
+            <div class="header">
+                <div class="page-head">
+                    <button type="button" class="btn-back-page">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <span>戻る</span>
+                    </button>
+                </div>
+                <div class="page-head">
+                    <span class="text-head">親設備詳細</span>
+                    <span class="seamote">SealMote</span>
+                    <span class="vherme">VHERME</span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="infomation">
+                    <div class="row">
+                        <div class="row-son">
+                            <div class="col">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="text">
+                                    <h3 class="title">会社 / 事業所名</h3>
+                                    <p>大阪支社</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-son">
+                            <div class="col">
+                                <div class="text">
+                                    <h3 class="title">所在地 1</h3>
+                                    <p>堺プラント</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <i class="fa-solid fa-minus"></i>
+                                <div class="text">
+                                    <h3 class="title">所在地 2</h3>
+                                    <p>三国ケ丘御幸通　第 1 ライン</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <i class="fa-solid fa-tag"></i>
+                            <div class="text">
+                                <h3 class="title">会社 / 事業所名</h3>
+                                <p>大阪支社</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <i class="fa-solid fa-tags"></i>
+                            <div class="text">
+                                <h3 class="title">会社 / 事業所名</h3>
+                                <p>大阪支社</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <i class="fa-solid fa-user"></i>
+                            <div class="text">
+                                <h3 class="title">会社 / 事業所名</h3>
+                                <p>大阪支社</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table tab-container">
+                    <div class="table-head tab-list">
+                        <button data-target="#table-checking-daily" class="btn_active js-tab-item ">定期点検</button>
+                        <button data-target="#table-daily-check" class="js-tab-item">日常点検</button>
+                        <button data-target="#table-report-problem" class="js-tab-item">障害報告</button>
+                        <button data-target="#table-CBM-warning" class="js-tab-item">CBMアラート</button>
+                    </div>
+                    <div class="change-layout tab-content">
+                        <div class="tab-content-item active" id="table-checking-daily">
+                            <div class="message">
+                                <i class="fa-solid fa-calendar-day"></i>
+                                <span>定期点検</span>
+                            </div>
+                            <div class="table-container">
+                                <table class="table-checking-daily">
+                                    <thead>
+                                        <tr>
+                                            <th>点検ステータス</th>
+                                            <th>報告書</th>
+                                            <th>実施日</th>
+                                            <th>点検ステータス</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="td">次回</div>
+                                            </td>
+                                            <td>
+                                                <div class="td"></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td success btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div><span class="outfit-font">3</span>ヶ月点検</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-primary">点検情報書作成</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td class="x">
+                                                <div class="td"><i class="fa-solid fa-x"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td error error btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div><span class="outfit-font">3</span>ヶ月点検</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-primary">点検情報書作成</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td grey">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div><span class="outfit-font">3</span>ヶ月点検</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="light">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td grey">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div><span class="outfit-font">3</span>ヶ月点検</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-info">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td grey">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div><span class="outfit-font">3</span>ヶ月点検</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-info">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td grey">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div><span class="outfit-font">3</span>ヶ月点検</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-info">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-content-item" id="table-daily-check">
+                            <div class="message">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span>日常点検</span>
+                            </div>
+                            <div class="table-container">
+                                <table class="table-daily-check">
+                                    <thead>
+                                        <tr>
+                                            <th>点検ステータス</th>
+                                            <th>報告書</th>
+                                            <th>実施日</th>
+                                            <th>点検ステータス</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="td">次回</div>
+                                            </td>
+                                            <td>
+                                                <div class="td"></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td violet btn-active"><span class="outfit-font">3</span>日常点検
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-primary">点検情報書作成</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td class="x">
+                                                <div class="td"><i class="fa-solid fa-x"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td error btn-active">
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">A点検</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-primary">点検情報書作成</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td grey"><span>A</span>点検</div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-info">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td grey"><span class="outfit-font">3</span>点検</div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-info">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td grey"><span class="outfit-font">3</span>点検</div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-info">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td grey"><span class="outfit-font">3</span>点検</div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-info">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-content-item" id="table-report-problem">
+                            <div class="message">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span>障害報告</span>
+                            </div>
+                            <div class="table-container">
+                                <table class="table-report-problem">
+                                    <thead>
+                                        <tr>
+                                            <th>報告書</th>
+                                            <th>実施日</th>
+                                            <th>点検ステータス</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="x">
+                                                <div class="td"><i class="fa-solid fa-x"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td error btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">障害</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-primary">点検情報書作成</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td grey btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">障害</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-info">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td success-i btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">+2</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-info">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td grey">障害</div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-info">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">2022.05.31</div>
+                                            </td>
+                                            <td>
+                                                <div class="td grey">障害</div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><button class="btn-info">日常点検情報書確認</button></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-content-item" id="table-CBM-warning">
+                            <div class="message">
+                                <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                <span><span class="outfit-font">CBMアラート</span></span>
+                            </div>
+                            <div class="table-container">
+                                <table class="table-CBM-warning">
+                                    <thead>
+                                        <tr>
+                                            <th>通知日時</th>
+                                            <th>アラート種類</th>
+                                            <th>CBM</th>
+                                            <th>点検ステータス</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><span class="date">2022.05.03 </span> <span>
+                                                        16:00</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td orange btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">警告</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><span class="vherme">VHERME</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">点検情報書作成</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><span class="date">2022.05.03 </span> <span>
+                                                        16:00</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td orange btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">警告</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><span class="seamote">SealMote</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">点検情報書作成</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><span class="date">2022.05.03 </span> <span>
+                                                        16:00</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td ping btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">警告</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><span class="vherme">VHERME</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">点検情報書作成</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><span class="date">2022.05.03 </span> <span>
+                                                        16:00</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td ping btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">警告</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><span class="vherme">VHERME</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">点検情報書作成</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><span class="date">2022.05.03 </span> <span>
+                                                        16:00</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td ping btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">警告</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><span class="vherme">VHERME</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">点検情報書作成</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><span class="date">2022.05.03 </span> <span>
+                                                        16:00</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td ping btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">警告</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><span class="vherme">VHERME</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">点検情報書作成</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><span class="date">2022.05.03 </span> <span>
+                                                        16:00</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td orange btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">警告</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><span class="vherme">VHERME</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">点検情報書作成</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="td"><span class="date">2022.05.03 </span> <span>
+                                                        16:00</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td orange btn-active">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                                    <div class="">警告</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="td"><span class="seamote">SealMote</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="td">点検情報書作成</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test hide">
+                    <button class="js-test-tab" data-id="#1">red</button>
+                    <button class="js-test-tab" data-id="#2">green</button>
+                    <button class="js-test-tab" data-id="#3">yellow</button>
+                    <div class="container" style="display: flex;">
+                        <div id="1" class="tab-content-item active"
+                            style="background-color:red ; width: 100px;height: 100px;">
+
+                        </div>
+                        <div id="2" class="tab-content-item"
+                            style="background-color: green; width: 100px;height: 100px;">
+
+                        </div>
+                        <div id="3" class="tab-content-item"
+                            style="background-color: yellow; width: 100px;height: 100px;">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-page">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

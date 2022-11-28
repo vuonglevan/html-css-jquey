@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mypage_owner_account_authority_null</title>
+    <link rel="stylesheet" href="../../assets/styles/reset.css">
+    <link rel="stylesheet" href="../../assets/icons/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+
+<body>
+    <div class="owner-account_authority container">
+        <div class="page-head">
+            <button type="button" class="btn-back-page">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>戻る</span>
+            </button>
+        </div>
+        <div class="page-content">
+            <h1 class="owner-account_authority-title">
+                オーナー権限譲渡
+            </h1>
+            <div class="owner-account_authority-head">
+                <div class="owner-account_authority-avatar">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span class="owner-account_authority-avatar-bold">山田 太郎</span>
+                    <span>さんのオーナー権限譲渡を行う場合は</span>
+                </div>
+                <p class="owner-account_authority-avatar-bottom">下記の事項を必ず読んでください。</p>
+            </div>
+            <div class="owner-account_authority-note">
+                オーナーの権限を譲渡してしまうと、その権限を元に戻すことはできませんので十分注意してください。
+            </div>
+            <div class="owner-account_authority-note-list">
+                <ul class="owner-account_authority-note-list-ul">
+                    <li class="owner-account_authority-note-list-li">譲渡はただちに反映され、この操作を取り消すことはできません。</li>
+                    <li class="owner-account_authority-note-list-li">
+                        新しいプライマリーオーナーが最高の権限を持つことになり、プライマリーオーナーオーナーに任命できるのも、この新しいプライマリーオーナーのみとなります。</li>
+                    <li class="owner-account_authority-note-list-li">お支払いなどのご契約情報を変更できるのもプライマリーオーナーのみとなります。</li>
+                </ul>
+            </div>
+            <form class="owner-account_authority-form">
+                <div class="owner-account_authority-form_input">
+                    <div class="owner-account_authority-form_label">
+                        <label for="owner-account_authority-form_input_text">新しいプライマリーオーナー </label><span
+                            class="required"> *</span>
+                    </div>
+                    <select name="" id="select">
+                        <option></option>
+                        <option value="0">〇〇〇〇 〇〇〇〇〇〇（xxxxxxx.xxxxxxxxxxxxx…</option>
+                        <option value="1">Sài Gòn</option>
+                        <option value="2">Đà Nẵng</option>
+                        <option value="3">Cần Thơ</option>
+                    </select>
+                </div>
+                <div class="owner-account_authority-form_input">
+                    <div class="owner-account_authority-form_label">
+                        <label for="owner-account_authority-form_input_password">パスワード</label><span class="required">
+                            *</span>
+                    </div>
+                    <input class="owner-account_authority-input" type="password"
+                        id="owner-account_authority-form_input_password" placeholder="パスワードを入力してください">
+                    <i class="fa-solid fa-eye " id="showpassword_js"></i>
+                </div>
+                <div class="owner-account_authority-form_checkbox">
+                    <input class="owner-account_authority-input-checkbox" type="checkbox" id="checkbox">
+                    <label for="checkbox"
+                        class="owner-account_authority-lable-checkbox">上記の注意事項内容を理解し、プライマリーオーナー権限譲渡に同意します。</label>
+                </div>
+            </form>
+        </div>
+        <div class="page-foot">
+            <div class="page-foot_btn">
+                <button class="page-foot_cancel">キャンセル</button>
+                <button class="page-foot_passed" id="btn_primary">オーナー権限譲渡</button>
+            </div>
+        </div>
+
+        <!-- modal  -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h1 class="owner-account_authority-title">
+                    オーナー権限譲渡
+                </h1>
+                <div class="owner-account_authority-head">
+                    <div class="owner-account_authority-avatar">
+                        <span class="owner-account_authority-avatar-bold">本当に</span>
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span class="user">〇〇〇〇 〇〇〇〇〇〇</span>
+                        <span class="Sick">さんを</span>
+                    </div>
+                    <p>新しいプライマリーオーナーにしますか？</p>
+                </div>
+                <div class="modal-owner-account_authority-note">
+                    オーナーの権限を譲渡してしまうと、その権限を元に戻すことはできませんので十分注意してください。
+                </div>
+                <form action="">
+                    <div class="owner-account_authority-form_input">
+                        <div class="owner-account_authority-form_label">
+                            <label
+                                for="modal-owner-account_authority-form_input_text">プライマリーオーナーの権限を以下のメンバーに譲渡する</label>
+                        </div>
+                        <i class="" id="modal-user_circle_js"></i>
+                        <input class="owner-account_authority-input" type="text" value="〇〇〇〇 〇〇〇〇〇〇（xxxxxxx.xxxxxxx…"
+                            id="modal-owner-account_authority-form_input_text" placeholder="ユーザーを入力してください">
+                        <i id="modal-removeText_js"></i>
+                    </div>
+                </form>
+                <div class="modal-page-foot">
+                    <div class="modal-page-foot_btn">
+                        <button class="modal-page-foot_cancel_js">キャンセル</button>
+                        <button class="modal-page-foot_passed_js">オーナー権限譲渡</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal2" style="margin-bottom: 200px;" class="modal2">
+            <div class="modal-content">
+                <h1 class="owner-account_authority-title">
+                    オーナーの権限を譲渡しました
+                </h1>
+                <p class="owner-account_authority-notification">
+                    あなたはもうプライマリーオーナーではありません。あなたは管理者となり、
+                </p>
+                <div class="owner-account_authority-head">
+                    <div class="owner-account_authority-avatar">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span class="owner-account_authority-avatar-bold">〇〇〇〇 〇〇〇〇〇〇</span>
+                        <span>さんが</span>
+                    </div>
+                    <p class="owner-account_authority-text">新しいプライマリーオーナーになりました。</p>
+                </div>
+                <button class="btn-modal2_js">アカウント情報へ戻る</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+        integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

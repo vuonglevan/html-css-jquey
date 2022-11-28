@@ -1,0 +1,25 @@
+.form-input,
+.form-select,
+.form-textarea,
+.form-input::placeholder,
+.form-select::placeholder,
+.form-textarea::placeholder,
+.form-label {
+    font-size: 13px;
+    letter-spacing: 0.65px;
+    line-height: 20px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    padding: 15px 10px;
+    border: 1px solid #E4E4E4;
+    border-radius: 8px;
+}
+
+.form-input::placeholder,
+.form-select::placeholder,
+.form-textarea::placeholder {
+    color: #BFBFBF;
+}

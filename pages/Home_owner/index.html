@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Owner</title>
+    <link rel="stylesheet" href="../../assets/styles/reset.css">
+    <link rel="stylesheet" href="../../assets/icons/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page">
+            <div class="header">
+                <div class="header-top">
+                    <div></div>
+                    <div class="header-icon">
+                        <div class="icon">
+                            <i class="fa-solid fa-question item"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-solid fa-circle-small"></i>
+                            <i class="fa-sharp fa-solid fa-file-circle-check item"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-solid fa-circle-small"></i>
+                            <i class="fa-solid fa-bullhorn item"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-circle-small"></i>
+                            <i class="fa-solid fa-circle-user item"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-botom">
+                    <div class="header-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="設備を検索">
+                    </div>
+                    <div class="header-qrcode">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                </div>
+            </div>
+            <h2 class="title"><span class="font-outfit-bold">Hello</span>, 山田 太郎 さん !</h2>
+            <div class="content deriodic tab-container">
+                <div class="buttons">
+                    <div class="btn_primary">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        定期点検情報
+                    </div>
+                    <div><button type="button" class="btn js-btn-tab btn_active" data-target="#deriodic-today">今日</button></div>
+                    <div><button type="button" class="btn js-btn-tab" data-target="#deriodic-this-week"> 今週</button></div>
+                    <div><button type="button" class="btn js-btn-tab" data-target="#deriodic-unreported">
+                            未報告 <i class="fa-solid fa-circle-exclamation"></i></button>
+                    </div>
+                </div>
+                <div class="slider-container active" id="deriodic-today">
+                    <span class="lable">
+                        2022.05.31 <span class="span-lable">TUE</span>
+                    </span>
+                    <div class="slider-content js-slider">
+                        <div class="slider-content-item box-error">
+                            <div class="row">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                障害（<span class="font-outfit-bold">A</span>点検）
+                            </div>
+                            <div class="row">
+                                <div class="row-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    大阪支社
+                                </div>
+                                <div class="row-item">
+                                    堺プラント
+                                </div>
+                                <div class="row-item">
+                                    三国ケ丘御幸通　第 1 ライン
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-tag"></i>
+                                プレス機
+                            </div>
+                        </div>
+                        <div class="slider-content-item box-success">
+                            <div class="row">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                障害（<span class="font-outfit-bold">A</span>点検）
+                            </div>
+                            <div class="row">
+                                <div class="row-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    大阪支社
+                                </div>
+                                <div class="row-item">
+                                    堺プラント
+                                </div>
+                                <div class="row-item">
+                                    三国ケ丘御幸通　第 1 ライン
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-tag"></i>
+                                プレス機
+                            </div>
+                        </div>
+                        <div class="slider-content-item box-success">
+                            <div class="row">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                障害（<span class="font-outfit-bold">A</span>点検）
+                            </div>
+                            <div class="row">
+                                <div class="row-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    大阪支社
+                                </div>
+                                <div class="row-item">
+                                    堺プラント
+                                </div>
+                                <div class="row-item">
+                                    三国ケ丘御幸通　第 1 ライン
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-tag"></i>
+                                プレス機
+                            </div>
+                        </div>
+                        <div class="slider-content-item box-success">
+                            <div class="row">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                障害（<span class="font-outfit-bold">3</span>点検）
+                            </div>
+                            <div class="row">
+                                <div class="row-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    大阪支社
+                                </div>
+                                <div class="row-item">
+                                    堺プラント
+                                </div>
+                                <div class="row-item">
+                                    三国ケ丘御幸通　第 1 ライン
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-tag"></i>
+                                プレス機
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-container" id="deriodic-this-week">
+                    <span class="lable">
+                        2022.05.31 <span class="span-lable">TUE</span>
+                    </span>
+                    <div class="slider-content js-slider">
+                        <div class="slider-content-item box-error">
+                            <div class="row">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                障害（<span class="font-outfit-bold">A</span>点検）
+                            </div>
+                            <div class="row">
+                                <div class="row-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    大阪支社
+                                </div>
+                                <div class="row-item">
+                                    堺プラント
+                                </div>
+                                <div class="row-item">
+                                    三国ケ丘御幸通　第 1 ライン
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-tag"></i>
+                                プレス機
+                            </div>
+                        </div>
+                        <div class="slider-content-item box-success">
+                            <div class="row">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                障害（<span class="font-outfit-bold">3</span>点検）
+                            </div>
+                            <div class="row">
+                                <div class="row-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    大阪支社
+                                </div>
+                                <div class="row-item">
+                                    堺プラント
+                                </div>
+                                <div class="row-item">
+                                    三国ケ丘御幸通　第 1 ライン
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-tag"></i>
+                                プレス機
+                            </div>
+                        </div>
+                        <div class="slider-content-item box-success">
+                            <div class="row">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                障害（<span class="font-outfit-bold">3</span>点検）
+                            </div>
+                            <div class="row">
+                                <div class="row-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    大阪支社
+                                </div>
+                                <div class="row-item">
+                                    堺プラント
+                                </div>
+                                <div class="row-item">
+                                    三国ケ丘御幸通　第 1 ライン
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-tag"></i>
+                                プレス機
+                            </div>
+                        </div>
+                        <div class="slider-content-item box-success">
+                            <div class="row">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                障害（<span class="font-outfit-bold">A</span>点検）
+                            </div>
+                            <div class="row">
+                                <div class="row-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    大阪支社
+                                </div>
+                                <div class="row-item">
+                                    堺プラント
+                                </div>
+                                <div class="row-item">
+                                    三国ケ丘御幸通　第 1 ライン
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-tag"></i>
+                                プレス機
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-container" id="deriodic-unreported">
+                    <div class="warning">
+                        <span class="label-warning">
+                            スケジュール変更はPC版にて設定を行なってください。
+                        </span>
+                    </div>
+                    <div class="slider-content js-slider">
+                        <div class="box">
+                            <div class="box-date">2022.05.25 WED</div>
+                            <div class="slider-content-item box-error">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-date">2022.05.25 WED</div>
+                            <div class="slider-content-item box-error">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">3</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div div>2022.05.25 WED</div>
+                            <div class="slider-content-item box-error">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-date"></div>
+                            <div class="slider-content-item box-error">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">3</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-date"></div>
+                            <div class="slider-content-item box-error">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showmore">
+                    <button>
+                        一覧でみる <i class="fa-sharp fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="content daily tab-container">
+                <div class="buttons">
+                    <div class="btn_primary">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        定期点検情報
+                    </div>
+                    <div><button type="button" class="btn js-btn-tab btn_active" data-target="#daily-today">今日</button></div>
+                    <div><button type="button" class="btn js-btn-tab" data-target="#daily-this-week"> 今週</button></div>
+                    <div><button type="button" class="btn js-btn-tab" data-target="#daily-unreported">
+                            未報告 <i class="fa-solid fa-circle-exclamation"></i></button>
+                    </div>
+                </div>
+                <div class="slider-container active" id="daily-today">
+                    <span class="lable">
+                        2022.05.31 <span class="span-lable">TUE</span>
+                    </span>
+                    <div class="slider-content js-slider">
+                        <div class="box">
+                            <div class="box-date"></div>
+                            <div class="slider-content-item box-violet">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-date"></div>
+                            <div class="slider-content-item box-violet">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-date"></div>
+                            <div class="slider-content-item box-violet">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-container" id="daily-this-week">
+                    <div class="slider-content js-slider">
+                        <div class="box">
+                            <div class="box-date">
+                                2022.05.31 TUE
+                            </div>
+                            <div class="slider-content-item box-violet">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                                <div class="none">
+                                    大阪支社
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-date"></div>
+                            <div class="slider-content-item box-violet">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                                <div class="none">
+                                    大阪支社
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-date"></div>
+                            <div class="slider-content-item box-violet">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                                <div class="none">
+                                    大阪支社
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box-none">
+                            <div class="box-date box-date-blue">2022.05.31 TUE</div>
+                            <div class="slider-content-item ">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">3</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                                <div class="none">
+                                    大阪支社
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-date"></div>
+                            <div class="slider-content-item box-violet">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">3</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                                <div class="none">
+                                    大阪支社
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box-none">
+                            <div class="box-date box-date-ping">2022.05.31 TUE</div>
+                            <div class="slider-content-item">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                                <div class="none">
+                                    大阪支社
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-container" id="daily-unreported">
+                    <div class="slider-content js-slider">
+                        <div class="box">
+                            <div class="box-date">2022.05.31 TUE</div>
+                            <div class="slider-content-item box-error">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                                <div class="none">
+                                    大阪支社
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-date"></div>
+                            <div class="slider-content-item box-error">
+                                <div class="row">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    障害（<span class="font-outfit-bold">A</span>点検）
+                                </div>
+                                <div class="row">
+                                    <div class="row-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        大阪支社
+                                    </div>
+                                    <div class="row-item">
+                                        堺プラント
+                                    </div>
+                                    <div class="row-item">
+                                        三国ケ丘御幸通　第 1 ライン
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa-solid fa-tag"></i>
+                                    プレス機
+                                </div>
+                                <div class="none">
+                                    大阪支社
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showmore">
+                    <button data-id="">
+                        一覧でみる <i class="fa-sharp fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="content feature tab-container">
+                <div class="buttons">
+                    <div class="btn_primary">
+                        <i class="fa-solid fa-bell"></i>
+                        メール通知設定中の設備
+                    </div>
+                </div>
+                <div class="slider-content js-slider">
+                    <div class="slider-content-item">
+                        <div class="row">
+                            <i class="fa-solid fa-tag"></i>
+                            障害（A点検）
+                        </div>
+                        <div class="row">
+                            <div class="row-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                大阪支社
+                            </div>
+                            <div class="row-item">
+                                堺プラント
+                            </div>
+                            <div class="row-item">
+                                三国ケ丘御幸通　第 1 ライン
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-solid fa-tag"></i>
+                            プレス機
+                        </div>
+                    </div>
+                    <div class="slider-content-item">
+                        <div class="row">
+                            <i class="fa-solid fa-tag"></i>
+                            障害（A点検）
+                        </div>
+                        <div class="row">
+                            <div class="row-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                大阪支社
+                            </div>
+                            <div class="row-item">
+                                堺プラント
+                            </div>
+                            <div class="row-item">
+                                三国ケ丘御幸通　第 1 ライン
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-solid fa-tag"></i>
+                            プレス機
+                        </div>
+                    </div>
+                    <div class="slider-content-item">
+                        <div class="row">
+                            <i class="fa-solid fa-tag"></i>
+                            障害（A点検）
+                        </div>
+                        <div class="row">
+                            <div class="row-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                大阪支社
+                            </div>
+                            <div class="row-item">
+                                堺プラント
+                            </div>
+                            <div class="row-item">
+                                三国ケ丘御幸通　第 1 ライン
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-solid fa-tag"></i>
+                            プレス機
+                        </div>
+                    </div>
+                    <div class="slider-content-item">
+                        <div class="row">
+                            <i class="fa-solid fa-tag"></i>
+                            障害（A点検）
+                        </div>
+                        <div class="row">
+                            <div class="row-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                大阪支社
+                            </div>
+                            <div class="row-item">
+                                堺プラント
+                            </div>
+                            <div class="row-item">
+                                三国ケ丘御幸通　第 1 ライン
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-solid fa-tag"></i>
+                            プレス機
+                        </div>
+                    </div>
+                </div>
+                <div class="showmore">
+                    <button data-id="">
+                        一覧でみる <i class="fa-sharp fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+        integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

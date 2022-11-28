@@ -1,0 +1,40 @@
+//làm sao để biết active mấy class
+//hỏi lại cái css font
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+function handleMousedownSlide(e) {
+    isDown = true;
+    const slider = $('.aw-students');
+    slider.addClass('active');
+    startX = e.pageX - slider[0].offsetLeft;
+    scrollLeft = slider[0].scrollLeft;
+}
+
+function handleMouseleaveSlide() {
+    isDown = false;
+    $('.aw-students').removeClass('active');
+}
+
+function handleMouseupSlide() {
+    isDown = false;
+    $('.aw-students').removeClass('active');
+}
+
+function handleMousemoveSlide(e) {
+    if (!isDown) return;
+    e.preventDefault();
+    const slider = $('.aw-students');
+    const x = e.pageX - slider[0].offsetLeft;
+    const walk = x - startX;
+    slider[0].scrollLeft = scrollLeft - walk;
+}
+
+$(function() {
+    $(document).on('mousedown', '.aw-students', handleMousedownSlide);
+    $(document).on('mouseleave', '.aw-students', handleMouseleaveSlide);
+    $(document).on('mouseup', '.aw-students', handleMouseupSlide);
+    $(document).on('mousemove', '.aw-students', handleMousemoveSlide);
+});

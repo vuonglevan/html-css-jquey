@@ -1,0 +1,24 @@
+.btn-back-page {
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.6px;
+    line-height: 18px;
+    color: var(--branch-color);
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-back-page i {
+    font-size: 10px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.btn-cancel {}
+
+.btn-save {}

@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Report_inspection_null</title>
+    <link rel="stylesheet" href="../../assets/styles/reset.css">
+    <link rel="stylesheet" href="../../assets/icons/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="report_inspection_null container">
+        <div class="page-head">
+            <button type="button" class="btn-back-page">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>戻る</span>
+            </button>
+        </div>
+        <div class="change-content mb ">
+            <h1 class="title">
+                点検報告書作成
+            </h1>
+            <p class="warning">点検報告書を作成すると「点検」も完了となります。</p>
+            <div class="step">
+                <div class="step_son">
+                    <div class="step_div">
+                        <div class="step_span step-active" data-step="1">STEP</div>
+                        <div class="step_item active">
+                            1
+                        </div>
+                        <div class="step_span step-active" data-step="1">実施確認</div>
+                    </div>
+                </div>
+                <div class="step_son">
+                    <div class="step_div">
+                        <div class="step_span" data-step="2">STEP</div>
+                        <div class="step_item">
+                            2
+                        </div>
+                        <div class="step_span" data-step="2">点検項目</div>
+                    </div>
+                </div>
+                <div class="step_son">
+                    <div class="step_div">
+                        <div class="step_span" data-step="3">STEP</div>
+                        <div class="step_item">
+                            3
+                        </div>
+                        <div class="step_span step-inactive" data-step="3">承認者</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-confirm">
+                <div class="content">
+                    <div class="content_row">
+                        <div class="content_label">
+                            会社 / 事業所名
+                        </div>
+                        <div class="content_info">
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            <span class="span">大阪支社</span>
+                        </div>
+                    </div>
+                    <div class="content_row2">
+                        <div class="content_location">
+                            <div class="content_label">
+                                所在地 1
+                            </div>
+                            <div class="content_info">
+                                <span class="span">堺プラント</span>
+                            </div>
+                        </div>
+                        <div class="content_location">
+                            <div class="content_label">
+                                所在地 2
+                            </div>
+                            <div class="content_info">
+                                <span class="span">三国ケ丘御幸通　第 1 ライン</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row3">
+                        <div class="tag">
+                            <div class="content_label">
+                                親設備
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-tag"></i>
+                                <span class="span">プレス機</span>
+                            </div>
+                        </div>
+                        <div class="tag">
+                            <div class="content_label">
+                                付属設備
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-tags"></i>
+                                <span class="span">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row4">
+                        <div class="content_label">
+                            点検種別
+                        </div>
+                        <div class="content_info">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <span class="span">定期点検</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="confirm  form-container" id="form-confirm" method="post">
+                    <div class="input-group">
+                        <label class="input-group_label" for="date">点検実施日<span class="required">*</span></label>
+                        <input type="text" class="input" name="" id="date" placeholder="YYYY. MM. DD" required>
+                        <i class="fa-solid fa-calendar-days js-calendar"></i>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group_label" for="text">点検実施者<span class="required">*</span></label>
+                        <input type="text" class="input" name="" id="text" placeholder="点検実施者名を入力してください" required>
+                    </div>
+                    <div class="page-foot">
+                        <div class="page-foot_btn">
+                            <button class="page-foot_cancel">キャンセル</button>
+                            <button type="submit" class="page-foot_passed js_nextstep">次へ</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="form-information form-hide">
+                <h2 class="content2-title"><i class="fa-solid fa-screwdriver-wrench"></i> 点検項目</h2>
+                <div class="content2-form">
+                    <form id="form-information" class="" enctype="multipart/form-data">
+                        <div class="input-group">
+                            <label class="input-group_label" for="text">点検実施者</label>
+                            <select name="" class="select-item">
+                                <option></option>
+                                <option value="0">OK</option>
+                                <option value="0">NO</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group_label" for="text">点検実施者</label>
+                            <select name="" class="select-item">
+                                <option></option>
+                                <option value="0">OK</option>
+                                <option value="0">NO</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group_label" for="text">点検実施者</label>
+                            <select name="" class="select-item">
+                                <option></option>
+                                <option value="0">OK</option>
+                                <option value="0">NO</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group_label" for="text">点検実施者</label>
+                            <select name="" class="select-item">
+                                <option></option>
+                                <option value="0">OK</option>
+                                <option value="0">NO</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group_label" for="">点検実施者</label>
+                            <div class="cover-input">
+                                <div class="input-group-left">
+                                    <input type="number" class="input3-4" name="" placeholder="0" class="">
+                                </div>
+                                <div class="input-group-right">ℓ</div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group_label" for="">点検実施者</label>
+                            <div class="cover-input">
+                                <div class="input-group-left">
+                                    <input type="number" class="input3-4" name="" placeholder="0" class="">
+                                </div>
+                                <div class="input-group-right">秒</div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group_label label-note" for="">点検実施者</label>
+                            <div class="input-group_note">※MONiPLAT🄬デフォルト点検項目</div>
+                            <div class="cover-input">
+                                <div class="input-group-left">
+                                    <input type="number" class="input3-4" name="" placeholder="0" class="">
+                                </div>
+                                <div class="input-group-right">分</div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-group_label" for="">点検実施者</label>
+                            <input type="text" class="input" name="" class="" placeholder="コメントがあれば入力してください">
+                        </div>
+                        <div class="upload-img">
+                            <label class="input-group_label" for="input-img">点検実施者</label>
+                            <label for="input-img" class="upload-img_content">
+                                <div class="upload-img_container" id="upload-img_container">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    <h2 class="note_title">アップロードする画像をドラッグ＆ドロップ</h2>
+                                    <div class="or">または</div>
+                                    <button type="button" class="btn-upload js-btn-upload"> ファイルを選択</button>
+                                    <input type="file" id="input-img" class="input-img">
+                                </div>
+                            </label>
+                        </div>
+                        <div class="page-foot">
+                            <div class="page-foot_btn">
+                                <button class="page-foot_cancel js-btn_cancel">キャンセル</button>
+                                <button class="page-foot_passed js_nextstep">次へ</button>
+                            </div>
+                        </div>
+                        <p>※アップロード可能な画像の種類（拡張子） 　は .jpg .png .gif です。</p>
+                        <p>※容量（データサイズ）の上限は 1 枚につき 5MB です。</p>
+                    </form>
+                    <div class="table">
+                        <div class="form-hide tr" id="template">
+                            <div class="td"><i class="fa-solid fa-trash-can js-remove-img"></i></div>
+                            <div class="td"><img src="https://picsum.photos/200/200" alt=""></div>
+                            <div class="td">
+                                <div class="name-img">
+                                    <p>image_moniplat.png</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="total-progress"></div>
+                                    <div class="made-progress"></div>
+                                    <span>1MB</span>
+                                </div>
+                            </div>
+                            <div class="td"><i class="fa-solid fa-circle-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="identification form-hide">
+                <h2 class="title">承認者</h2>
+                <h3>この申請は管理者の承認が必要です。承認者が複数いる場合は、承認する順番に設定してください。</h3>
+                <div class="identification-content">
+                    <div class="identification-form">
+                        <form action="" id="form-identification" class=" confirm form-identification">
+                            <div class="list-select">
+                                <div class="input-group selected js-seclect-first">
+                                    <div class="group">
+                                        <label class="input-group_label" for="text">点 <span class="index">1</span> 検実施者
+                                            <span class="required">
+                                                *</span></label>
+                                        <select name="" class="select-item js-select-user js-custom-select" data-id="1" required>
+                                            <option></option>
+                                            <option value="0"><i class="fa-solid fa-circle-user icon-user"></i>〇〇〇〇 〇〇〇〇（xxxxxxx.xxxxxxxxxxxx…</option>
+                                            <option value="0"><i class="fa-solid fa-circle-user icon-user"></i>〇〇〇〇 〇〇〇〇（xxxxxxx.xxxxxxxxxxxx…</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-xmark js-remove-select"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-person">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <span>承認者追加</span>
+                            </div>
+                            <div class="input-group">
+                                <label class="input-group_label" for="">コメント</label>
+                                <input type="text" class="input" name="" class="" placeholder="コメントがあれば入力してください">
+                            </div>
+                            <div class="page-foot">
+                                <div class="page-foot_btn">
+                                    <button class="page-foot_cancel js-btn_cancel">キャンセル</button>
+                                    <button type="submit" class="page-foot_passed js-btn-identification">次へ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inspection-report form-hide">
+            <div class="inspection-report_content">
+                <h1 class="title">点検報告書</h1>
+                <div class="content">
+                    <div class="content_row">
+                        <div class="content_label">
+                            会社 / 事業所名
+                        </div>
+                        <div class="content_info">
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            <span class="span">大阪支社</span>
+                        </div>
+                    </div>
+                    <div class="content_row">
+                        <div class="content_location">
+                            <div class="content_label">
+                                所在地 1
+                            </div>
+                            <div class="content_info">
+                                <span class="span">堺プラント</span>
+                            </div>
+                        </div>
+                        <div class="content_location">
+
+                            <div class="content_label">
+                                所在地 2
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-minus"></i>
+                                <span class="span">三国ケ丘御幸通　第 1 ライン</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row">
+                        <div class="tag">
+                            <div class="content_label">
+                                親設備
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-tag"></i>
+                                <span class="span">プレス機</span>
+                            </div>
+                        </div>
+                        <div class="tag">
+                            <div class="content_label">
+                                付属設備
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-tags"></i>
+                                <span class="span">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row">
+                        <div class="content_label">
+                            点検種別
+                        </div>
+                        <div class="content_info">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <span class="span">定期点検</span>
+                        </div>
+                    </div>
+                    <div class="content_row">
+                        <div class="test-date">
+                            <div class="content_label">
+                                点検種別
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                <span class="span">2022.05.31</span>
+                            </div>
+                        </div>
+                        <div class="test-date">
+                            <div class="content_label">
+                                点検種別
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-user"></i>
+                                <span class="span">山田 太郎</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <h2 class="content2-title"><i class="fa-solid fa-screwdriver-wrench"></i> 点検項目</h2>
+                <div class="importance">
+                    <div class="row">
+                        <div class="importance-key">安全エリアセンサ動作チェック</div>
+                        <div class="importance-result">OK</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">非常停止阻止に動作不良はないか</div>
+                        <div class="importance-result">OK</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">各スイッチ・操作釘の破損はないか</div>
+                        <div class="importance-result">OK</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">ボルト・ナット類に緩み、脱落はないか</div>
+                        <div class="importance-result">NG</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">安全エリアセンサ動作チェック</div>
+                        <div class="importance-result">90</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">安全エリアセンサ動作チェック</div>
+                        <div class="importance-result">80</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">点検にかかった作業時間</div>
+                        <div class="importance-result">150</div>
+                    </div>
+                </div>
+                <h2 class="content2-title"><i class="fa-solid fa-comment-dots"></i> コメント</h2>
+                <div class="comment">
+                    <p>点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。
+                        点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。</p>
+                </div>
+                <h2 class="content2-title"><i class="fa-solid fa-image"></i> 画像</h2>
+                <div class="div-img">
+                    <img src="https://picsum.photos/200/200" alt="">
+                    <img src="https://picsum.photos/200/200" alt="">
+                </div>
+                <h2 class="content2-title"><i class="fa-solid fa-file-circle-check"></i> 承認者</h2>
+                <div class="user-content">
+                    <div class="row">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <div class="info">
+                            <div class="name">〇〇〇〇 〇〇〇〇 <br> xxxxxxx.xxxxxxxxxxxxx@example.com</div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="content2-title"><i class="fa-solid fa-comment-dots"></i> コメント</h2>
+                <div class="comment">
+                    <div class="row-comment">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="page-foot">
+                <div class="page-foot_btn">
+                    <button class="page-foot_cancel " id="btn_backToConfirm">キャンセル</button>
+                    <button class="page-foot_passed js-inspection-report">次へ</button>
+                </div>
+            </div>
+        </div>
+        <div class="inspection-report-two form-hide">
+            <div class="inspection-report_content">
+                <h1 class="title">点検報告書</h1>
+                <div class="content">
+                    <div class="content_row">
+                        <div class="content_label">
+                            会社 / 事業所名
+                        </div>
+                        <div class="content_info">
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            <span class="span">大阪支社</span>
+                        </div>
+                    </div>
+                    <div class="content_row">
+                        <div class="content_location">
+                            <div class="content_label">
+                                所在地 1
+                            </div>
+                            <div class="content_info">
+                                <span class="span">堺プラント</span>
+                            </div>
+                        </div>
+                        <div class="content_location">
+
+                            <div class="content_label">
+                                所在地 2
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-minus"></i>
+                                <span class="span">三国ケ丘御幸通　第 1 ライン</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row">
+                        <div class="tag">
+                            <div class="content_label">
+                                親設備
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-tag"></i>
+                                <span class="span">プレス機</span>
+                            </div>
+                        </div>
+                        <div class="tag">
+                            <div class="content_label">
+                                付属設備
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-tags"></i>
+                                <span class="span">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row">
+                        <div class="content_label">
+                            点検種別
+                        </div>
+                        <div class="content_info">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <span class="span">定期点検</span>
+                        </div>
+                    </div>
+                    <div class="content_row">
+                        <div class="test-date">
+                            <div class="content_label">
+                                点検種別
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                <span class="span">2022.05.31</span>
+                            </div>
+                        </div>
+                        <div class="test-date">
+                            <div class="content_label">
+                                点検種別
+                            </div>
+                            <div class="content_info">
+                                <i class="fa-solid fa-user"></i>
+                                <span class="span">山田 太郎</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <h2 class="content2-title"><i class="fa-solid fa-screwdriver-wrench"></i> 点検項目</h2>
+                <div class="importance">
+                    <div class="row">
+                        <div class="importance-key">安全エリアセンサ動作チェック</div>
+                        <div class="importance-result">OK</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">非常停止阻止に動作不良はないか</div>
+                        <div class="importance-result">OK</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">各スイッチ・操作釘の破損はないか</div>
+                        <div class="importance-result">OK</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">ボルト・ナット類に緩み、脱落はないか</div>
+                        <div class="importance-result">NG</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">安全エリアセンサ動作チェック</div>
+                        <div class="importance-result">90</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">安全エリアセンサ動作チェック</div>
+                        <div class="importance-result">80</div>
+                    </div>
+                    <div class="row">
+                        <div class="importance-key">点検にかかった作業時間</div>
+                        <div class="importance-result">150</div>
+                    </div>
+                </div>
+                <h2 class="content2-title"><i class="fa-solid fa-comment-dots"></i> コメント</h2>
+                <div class="comment">
+                    <p>点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。
+                        点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。点検時のメモなどをここに記入します。</p>
+                </div>
+                <h2 class="content2-title"><i class="fa-solid fa-image"></i> 画像</h2>
+                <div class="div-img">
+                    <img src="https://picsum.photos/200/200" alt="">
+                    <img src="https://picsum.photos/200/200" alt="">
+                </div>
+                <h2 class="content2-title"><i class="fa-solid fa-file-circle-check"></i> 承認者</h2>
+                <div class="user-content">
+                    <div class="row">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <div class="info">
+                            <div class="name">〇〇〇〇 〇〇〇〇 <br> xxxxxxx.xxxxxxxxxxxxx@example.com</div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="content2-title"><i class="fa-solid fa-comment-dots"></i> コメント</h2>
+                <div class="comment">
+                    <div class="row-comment">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="page-foot">
+                <div class="page-foot_btn">
+                    <button class="page-foot_cancel " id="btn_backToConfirm">キャンセル</button>
+                    <button class="page-foot_passed">次へ</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal js-modal">
+            <div class="modal-content">
+                <h1 class="modal-inspection-title">点検報告書</h1>
+                <h3 class="modal-inspection-note">点検報告書が保存されました。</h3>
+                <div class="page-foot_btn">
+                    <button class="page-foot_cancel js-cancel">閉じる</button>
+                    <button class="page-foot_passed js-show-inspection-report-two">印刷</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-storage js-modal-storage">
+            <div class="modal-content">
+                <h1 class="modal-storage-title">点検報告書一時保存</h1>
+                <div class="content-storage">
+                    <p class="modal-storage-note">点検報告書が保存されました。<br>
+                        この点検報告書はまだ<br>
+                        「保存 / 申請」されていません。<br>
+                        <i class="fa-solid fa-file-circle-check"></i>
+                        このマークの「アクション申請 未送信」<br>
+                        タブより報告を完了させるのを<br>
+                        忘れずに行なってください。
+                    </p>
+                </div>
+                <div class="page-foot_btn">
+                    <button class="page-foot_cancel js-cancel">閉じる</button>
+                    <button class="page-foot_passed js-pass">アクション申請</button>
+                </div>
+            </div>
+        </div>
+        <div class="input-group selected form-hide" id="template-select">
+            <div class="group">
+                <label class="input-group_label" for="text">点 <span class="index">1</span> 検実施者
+                    <span class="required">
+                        *</span></label>
+                <select  name="select" class="select-item js-select-user" required>
+                    <option></option>
+                    <option value="0"><i class="fa-solid fa-circle-user icon-user"></i>〇〇〇〇 〇〇〇〇（xxxxxxx.xxxxxxxxxxxx…</option>
+                    <option value="0"><i class="fa-solid fa-circle-user icon-user"></i>〇〇〇〇 〇〇〇〇（xxxxxxx.xxxxxxxxxxxx…</option>
+                </select>
+            </div>
+            <div>
+                <i class="fa-solid fa-xmark js-remove-select"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

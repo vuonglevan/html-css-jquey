@@ -1,0 +1,61 @@
+.owner-notifications-title {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.owner-notifications-title i {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.owner-notifications-items {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+
+.owner-notifications-item {
+    border: 1px solid #E4E4E4;
+    border-radius: 10px;
+    background: #fff;
+    padding: 15px 10px;
+    font-weight: 700;
+}
+
+.notifications-item-type {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.notifications-item-type i {
+    font-size: 14px;
+    color: #888888;
+    margin-right: 5px;
+}
+
+.notifications-item-address {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    line-height: 15px;
+    display: flex;
+    align-items: baseline;
+}
+
+.notifications-item-address i {
+    font-size: 10px;
+    color: #888888;
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
+.notifications-item-address > div > div:not(:last-child) {
+    margin-bottom: 5px;
+}
