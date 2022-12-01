@@ -404,6 +404,15 @@ input::placeholder {
     display: none;
 }
 
+.alert-content-no-err{
+    display: none;
+}
+
+.alert-violet .alert-content-no-err,
+.alert-success .alert-content-no-err{
+    display: block;
+}
+
 .alert-success .alert-text {
     font-size: 16px;
     font-weight: 700;
@@ -436,10 +445,21 @@ input::placeholder {
     color: #359EC7;
 }
 
-.js-popup-alert .fa-angle-right{
+.alert-error .fa-circle-check{
+    color: #BFBFBF;
+}
+
+.alert-error .alert-item:nth-child(2){
+    padding: 0 45px;
+}
+
+.alert-item i{
     position: absolute;
     right: 25px;
     color: #359EC7;
+}
+.alert-content-err .alert-item:nth-child(1){
+    color: #BFBFBF;
 }
 
 .fa-calendar-day {
