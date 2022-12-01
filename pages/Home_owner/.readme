@@ -1,1 +1,31 @@
- - label check lại class theo postion mẹ 
+ - add class hop ly bang js
+ - thay đổi class theo bõ click
+ - add class and remove class animaition
+
+
+
+
+
+- change buttons
+ <!-- const currentTab = $(this); -->
+ <!-- $('.js-btn-tab').removeClass('btn_active'); -->
+ <!-- $('.btn-inital').not($(this).parents('.buttons').find('.btn-inital')).addClass('btn_active'); -->
+ <!-- currentTab.addClass('btn_active'); -->
+ <!-- const content = currentTab.closest('.tab-container'); -->
+ <!-- content.find('.btn.btn_active').removeClass('btn_active'); -->
+ <!-- currentTab.addClass('btn_active'); -->
+ <!-- const target = currentTab.attr('data-target'); -->
+ <!-- content.find('.slider-container').removeClass('active'); -->
+ <!-- $('.slider-inital').not($(this).parents('.tab-container').find('.slider-inital')).addClass('active'); -->
+ <!-- $('.slider-container').removeClass('active'); -->
+ <!-- $(target).addClass('active'); -->
+
+
+ - click ra bên ngoài là bắt sự kiện của dom rồi so sánh phần tử đó với alert kia nếu khác sẽ add class để ẩn đi
+ 
+
+
+ 1. ẩn hiện popup
+    nhiệm vụ: click ra bên ngoài bên popup thì nó sẽ ẩn đi(addClass ẩn đi);
+    khó khăn: - làm sao để click ra bên ngoài lại check đc khác sự kiện vs sự kiện show popup;
+            -    làm sao để check click vào phần tử con của popup

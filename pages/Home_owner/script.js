@@ -4,23 +4,16 @@ let scrollLeft;
 
 function showSliderDeriodic() {
     const currentTab = $(this);
-    $('.js-btn-tab').removeClass('btn_active');
-    $('.btn-inital').not($(this).parents('.buttons').find('.btn-inital')).addClass('btn_active');
-    currentTab.addClass('btn_active');
-
     const content = currentTab.closest('.tab-container');
     content.find('.btn.btn_active').removeClass('btn_active');
     currentTab.addClass('btn_active');
     const target = currentTab.attr('data-target');
     content.find('.slider-container').removeClass('active');
-
-    $('.slider-container').removeClass('active');
-    $('.slider-inital').not($(this).parents('.tab-container').find('.slider-inital')).addClass('active');
-    $(target).addClass('active');
+    $(target).addClass('active')
 }
 
 function showManageDetail() {
-    const currentTab =$(this);
+    const currentTab = $(this);
     $('.js-btn-manage-tab').removeClass('btn_active');
     currentTab.addClass('btn_active');
     $('.manage-container-tab').removeClass('active');
@@ -52,22 +45,53 @@ function handleMousemoveSlide(e) {
     slider[0].scrollLeft = scrollLeft - walk;
 }
 
-function showmore (){
-    $('.manage-detail').removeClass('hidden');
-    $('.page').addClass('hidden');
+function showmore() {
+    const manage = $(this).attr('data-showmore');
+    console.log(manage);
+    $(manage).addClass('active');
+    $('.js-page-container').addClass('hidden');
 }
 
-function backtohome(){
-    $('.manage-detail').addClass('hidden');
-    $('.page').removeClass('hidden');
+function backtohome() {
+    const variableBack = $(this).attr('data-back');
+    $('.js-page-container').removeClass('hidden');
+    $(variableBack).removeClass('active');
+    $(variableBack).addClass('hidden');
+}
+
+function showMessage() {
+    // const height = $(document).height();
+    // const alert = $('#alert-aminal');
+    // alert.height(height / 3);
+    if ($('.js-popup-alert.show').length) return;
+    const status = $(this).attr('data-status');
+    if (status) {
+        const classAlert = $(this).attr('data-status');
+        $('#alert-aminal').removeClass();
+        $('#alert-aminal').addClass(classAlert);
+        $('#alert-aminal').addClass('js-popup-alert');
+        setTimeout(() => {
+            $('#alert-aminal').addClass('show');
+        }, 1001)
+    }
+}
+
+function handleClickOutside(e) {
+    const currentElement = $(e.target);
+    if ($('.js-popup-alert.show').length && !currentElement.hasClass('js-popup-alert') && !currentElement.parents('.js-popup-alert').length) {
+        $('#alert-aminal').addClass('downAlert');
+        $('#alert-aminal').removeClass('show');
+    }
 }
 
 $(document).ready(function () {
-    $(document).on('click', '.js-btn-tab', showSliderDeriodic)
-    $(document).on('click', '.js-btn-manage-tab', showManageDetail)
-    $(document).on('click', '.js-showmore',showmore );
-    $(document).on('click', '.js-back-to-home',backtohome );
-    $(document).on('mousedown', '.js-slider', handleMousedownSlide)
+    $(document).on('click', '.js-btn-tab', showSliderDeriodic);
+    $(document).on('click', '.js-btn-manage-tab', showManageDetail);
+    $(document).on('click', '.js-showmore', showmore);
+    $(document).on('click', '.js-back-to-home', backtohome);
+    $(document).on('click', '.slider-content-item', showMessage);
+    $(document).on('click', handleClickOutside);
+    $(document).on('mousedown', '.js-slider', handleMousedownSlide);
     $(document).on('mouseleave', '.js-slider', handleMouseleaveSlide);
     $(document).on('mouseup', '.js-slider', handleMouseupSlide);
     $(document).on('mousemove', '.js-slider', handleMousemoveSlide);
